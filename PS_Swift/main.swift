@@ -5,6 +5,5 @@
 //  Created by 정상화 on 2023/09/11.
 //
 import Foundation
-BOJ2480()
-
+BOJ28278()
 
