@@ -18,7 +18,7 @@ func BOJ28278(){
         else{
             if Int(arr[0]) == 2{
                 if !stack.isEmpty{
-                    print(stack.popLast())
+                    print(stack.popLast()!)
                 }
                 else{
                     print(-1)
@@ -37,10 +37,10 @@ func BOJ28278(){
             }
             else if Int(arr[0]) == 5{
                 if !stack.isEmpty{
-                    print(-1)
+                    print(stack.last!)
                 }
                 else{
-                    print(stack.last)
+                    print(-1)
                 }
             }
         }
