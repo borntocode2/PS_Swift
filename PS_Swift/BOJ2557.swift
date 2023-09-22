@@ -6,3 +6,6 @@
 //
 
 import Foundation
+func BOJ2557(){
+    print("Hello, world!")
+}
