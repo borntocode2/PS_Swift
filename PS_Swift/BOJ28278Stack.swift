@@ -4,7 +4,10 @@
 //
 //  Created by 정상화 on 2023/09/18.
 //
-
+// [1, 2, 3, 4, 5] -> popFirst() -> [2, 3, 4, 5] # 1 출력
+// [1, 2, 3, 4, 5] -> popLast() -> [1, 2, 3, 4] # 5 출력
+// [1, 2, 3, 4, 5] -> removeFirst() -> [2, 3, 4, 5] # 1 삭제
+// [1, 2, 3, 4, 5] -> removeLast() -> [1, 2, 3, 4] # 5 삭제
 import Foundation
 func BOJ28278(){
     var stack = [Int]()
