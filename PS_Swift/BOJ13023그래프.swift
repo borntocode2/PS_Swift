@@ -16,7 +16,7 @@ func BOJ13023(){
     var visits = [Int](repeating: -1, count: N) // 파이썬에서 visits = [-1 for _ in range(N)] 과 같은 것
     var dq = [Int]()
     
-    for _ in 0...M{
+    for _ in 1...M{
         let input = readLine()!
         let arr = input.split(separator:" ").compactMap { Int($0) }
         relations[arr[0]].append(arr[1])
@@ -29,10 +29,18 @@ func BOJ13023(){
     visits[0] = 1
     while !(cdq.isEmpty){
         for i in relations[cdq.popFirst()!]{
-            
+            if visits[i] == -1 {
+                cdq.append(i)
+                visits[i] = 1
+            }
         }
-                
+        
     }
-    
-    
+    if visits.contains(-1){
+        print(0)
+    }
+    else{
+        print(1)
+    }
 }
+
