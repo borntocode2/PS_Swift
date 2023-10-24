@@ -25,22 +25,5 @@ func BOJ13023(){
     for i in relations[0]{
         dq.append(i)
     }
-    var cdq = dq[dq.indices] // popFirst()를 사용하기 위해 ArraySlice 타입으로 바꿔줌
-    visits[0] = 1
-    while !(cdq.isEmpty){
-        for i in relations[cdq.popFirst()!]{
-            if visits[i] == -1 {
-                cdq.append(i)
-                visits[i] = 1
-            }
-        }
-        
-    }
-    if visits.contains(-1){
-        print(0)
-    }
-    else{
-        print(1)
-    }
-}
+
 
