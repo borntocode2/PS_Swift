@@ -22,8 +22,7 @@ func BOJ13023(){
         relations[arr[1]].append(arr[0])
     }
     func DFS(x: Int, count: Int){
-        print(count)
-        if count == M{
+        if count == 5{
             print(1)
             exit(0)
         }
@@ -36,7 +35,7 @@ func BOJ13023(){
         }
     }
     
-    for i in relations[0]{
+    for i in 0...M-1{
         if visits[i] == -1{
             visits[i] = 1
             DFS(x: i, count: 1)
