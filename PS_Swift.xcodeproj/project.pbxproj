@@ -32,6 +32,7 @@
 		CA8EDF3A2AD0FF260016AF3D /* BOJ1920이분탐색.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EDF392AD0FF260016AF3D /* BOJ1920이분탐색.swift */; };
 		CA8EDF3C2ADD4F2E0016AF3D /* BOJ11866.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EDF3B2ADD4F2E0016AF3D /* BOJ11866.swift */; };
 		CA8EDF3E2AE6439B0016AF3D /* BOJ13023그래프.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EDF3D2AE6439B0016AF3D /* BOJ13023그래프.swift */; };
+		CA8EDF402AEBA8370016AF3D /* BOJ2468그래프.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EDF3F2AEBA8370016AF3D /* BOJ2468그래프.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +74,7 @@
 		CA8EDF392AD0FF260016AF3D /* BOJ1920이분탐색.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ1920이분탐색.swift"; sourceTree = "<group>"; };
 		CA8EDF3B2ADD4F2E0016AF3D /* BOJ11866.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ11866.swift; sourceTree = "<group>"; };
 		CA8EDF3D2AE6439B0016AF3D /* BOJ13023그래프.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ13023그래프.swift"; sourceTree = "<group>"; };
+		CA8EDF3F2AEBA8370016AF3D /* BOJ2468그래프.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BOJ2468그래프.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				CA8EDF2F2ACBE95C0016AF3D /* BOJ1110.swift */,
 				CA8EDF312ACFFFAC0016AF3D /* BOJ5622.swift */,
 				CA8EDF332AD006790016AF3D /* BOJ4673.swift */,
+				CA8EDF3F2AEBA8370016AF3D /* BOJ2468그래프.swift */,
 				CA8EDF372AD0FC020016AF3D /* BOJ1260BFSDFS.swift */,
 				CA8EDF392AD0FF260016AF3D /* BOJ1920이분탐색.swift */,
 				CA8EDF352AD0EBD90016AF3D /* BOJ1966failed.swift */,
@@ -197,6 +200,7 @@
 				CA8EDF3C2ADD4F2E0016AF3D /* BOJ11866.swift in Sources */,
 				CA8EDF162AB5D0100016AF3D /* BOJ9498.swift in Sources */,
 				CA8EDF1E2AB863A00016AF3D /* BOJ28278Stack.swift in Sources */,
+				CA8EDF402AEBA8370016AF3D /* BOJ2468그래프.swift in Sources */,
 				CA8EDF382AD0FC020016AF3D /* BOJ1260BFSDFS.swift in Sources */,
 				CA8EDF242ABDC4260016AF3D /* BOJ25206.swift in Sources */,
 				CA8EDF202ABA433D0016AF3D /* BOJ2557.swift in Sources */,
