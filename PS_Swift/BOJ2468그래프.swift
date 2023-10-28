@@ -14,5 +14,6 @@ func BOJ2468(){
         var input = readLine()!
         my_map.append(input.split(separator:" ").compactMap { Int($0)}) //input받은 것을 2차원배열my_map에 append
     }
+    for 
     
 }
