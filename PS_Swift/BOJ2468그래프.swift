@@ -13,6 +13,8 @@ func BOJ2468(){
     let dx = [0, -1, 0, 1]
     let dy = [-1, 0, 1, 0]
     var dq = [(Int, Int)]() // 좌표 append할 수 있는 배열선언
+    var dq_cnt = [[Int]]()
+    var cnt = 0
     for _ in 1...N{
         var input = readLine()!
         my_map.append(input.split(separator:" ").compactMap { Int($0)}) //input받은 것을 2차원배열my_map에 append
@@ -30,14 +32,17 @@ func BOJ2468(){
         }
         while !(dq.isEmpty){
             let (x, y) = dq.removeFirst()
-            for i in 0..<3{
-                var nx = dx[i] + x
-                var ny = dy[i] + y
-                if nx >= 0 && ny >= 0 && nx < N && ny < N{
-                    if visits[nx][ny] == -1{
-                        
+            if visits[x][y] == -1{
+                for i in 0..<3{
+                    var nx = dx[i] + x
+                    var ny = dy[i] + y
+                    if nx >= 0 && ny >= 0 && nx < N && ny < N{
+                        if visits[nx][ny] == -1{
+                            dq_cnt[cnt].append(1)
+                        }
                     }
                 }
+                
             }
             }
         
