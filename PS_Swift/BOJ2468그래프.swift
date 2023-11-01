@@ -10,15 +10,17 @@ func BOJ2468(){
     let N = Int(readLine()!)!
     var visits = [[Int]](repeating: Array(repeating:-1, count: N), count: N) // 2중 repeating문으로 2차원배열 -1을 저장해준다.
     var my_map = [[Int]]() //map으로 저장하려면 2차원배열로 선언해준다.
+    var cnt = 1
     let dx = [0, -1, 0, 1]
     let dy = [-1, 0, 1, 0]
     var dq = [(Int, Int)]() // 좌표 append할 수 있는 배열선언
     var dq_cnt = [(Int, Int)]()
-    for _ in 1...N{
+    var max_bfs = 0
+    for _ in 0..<N{
         var input = readLine()!
         my_map.append(input.split(separator:" ").compactMap { Int($0)}) //input받은 것을 2차원배열my_map에 append
     }
-    func BFS(h: Int){
+    func BFS(h: Int)-> Int{
         for i in 0..<N{
             for j in 0..<N{
                 if my_map[i][j] <= h{
@@ -47,13 +49,20 @@ func BOJ2468(){
                         }
                     }
                 }
-                
+                cnt = cnt + 1
             }
             }
+        return cnt
         
         
         }
-            
+    
+    for i in 0..<101{
+        
+        max_bfs = max(max_bfs, BFS(h: i))
+    }
+    print(max_bfs)
+    
         }
         
     
