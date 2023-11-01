@@ -13,8 +13,7 @@ func BOJ2468(){
     let dx = [0, -1, 0, 1]
     let dy = [-1, 0, 1, 0]
     var dq = [(Int, Int)]() // 좌표 append할 수 있는 배열선언
-    var dq_cnt = [[Int]]()
-    var cnt = 0
+    var dq_cnt = [(Int, Int)]()
     for _ in 1...N{
         var input = readLine()!
         my_map.append(input.split(separator:" ").compactMap { Int($0)}) //input받은 것을 2차원배열my_map에 append
@@ -32,13 +31,19 @@ func BOJ2468(){
         }
         while !(dq.isEmpty){
             let (x, y) = dq.removeFirst()
-            if visits[x][y] == -1{
-                for i in 0..<3{
-                    var nx = dx[i] + x
-                    var ny = dy[i] + y
-                    if nx >= 0 && ny >= 0 && nx < N && ny < N{
-                        if visits[nx][ny] == -1{
-                            dq_cnt[cnt].append(1)
+            if visits[x][y] == -1{ // 여기서 다른 BFS로 isolation 해야한다.
+                dq_cnt.append((x,y))
+                visits[x][y] = 1
+                while !dq_cnt.isEmpty{
+                    for i in 0..<3{
+                        var nx = dx[i] + x
+                        var ny = dy[i] + y
+                        if nx >= 0 && ny >= 0 && nx < N && ny < N{
+                            if visits[nx][ny] == -1{ // 이 때, isolation, 다른 BFS넘어가서 안전영역을 count해야함.
+                                dq_cnt.append((nx, ny))
+                                visits[nx][ny] = 1
+                        }
+                            
                         }
                     }
                 }
