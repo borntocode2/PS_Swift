@@ -62,7 +62,7 @@ func BOJ2468(){
         
         max_bfs = max(max_bfs, BFS(h: i))
     }
-    print(max_bfs)
+    print(max_bfs) // cnt값이 이상하게 나옴
     
         }
         
