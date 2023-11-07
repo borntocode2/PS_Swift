@@ -7,6 +7,7 @@
 
 import Foundation
 func BOJ2468(){
+    let startTime = Date()
     let N = Int(readLine()!)!
     var visits = [[Int]](repeating: Array(repeating:-1, count: N), count: N) // 2중 repeating문으로 2차원배열 -1을 저장해준다.
     var my_map = [[Int]]() //map으로 저장하려면 2차원배열로 선언해준다.
@@ -16,11 +17,14 @@ func BOJ2468(){
     var dq = [(Int, Int)]() // 좌표 append할 수 있는 배열선언
     var dq_cnt = [(Int, Int)]()
     var max_bfs = 1
+    var max_array = [Int]()
     for _ in 0..<N{
         var input = readLine()!
         my_map.append(input.split(separator:" ").compactMap { Int($0)}) //input받은 것을 2차원배열my_map에 append
     }
-    func BFS(h: Int)-> Int{
+    func BFS(h: Int){
+        visits = [[Int]](repeating: Array(repeating:-1, count: N), count: N)
+        cnt = 0
         for i in 0..<N{
             for j in 0..<N{
                 if my_map[i][j] <= h{
@@ -31,6 +35,7 @@ func BOJ2468(){
                 }
             }
         }
+        cnt = 0
         while !(dq.isEmpty){
             var (x, y) = dq.removeFirst()
             if visits[x][y] == -1{ // 여기서 다른 BFS로 isolation 해야한다.
@@ -53,17 +58,26 @@ func BOJ2468(){
                 cnt = cnt + 1
             }
         }
-        return cnt
+        max_array.append(cnt)
         
         
     }
+    var max_value = my_map.flatMap({$0}).max()!
     
     for i in 0..<101{
-        
-        max_bfs = max(max_bfs, BFS(h: i))
+        if max_value > i{
+            BFS(h: i)
+        }
+        else{
+            break
+        }
     }
-    print(max_bfs) // cnt값이 이상하게 나옴
     
+    print(max_array.max()!) // cnt값이 이상하게 나옴
+    let endTime = Date()
+    let executionTime = endTime.timeIntervalSince(startTime)
+    print("Execution time: \(executionTime) seconds")
+
         }
         
     
